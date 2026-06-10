@@ -10,7 +10,7 @@ const tabs = [
 
 export function BottomTabBar() {
   return (
-    <nav className="fixed bottom-0 left-0 right-0 flex justify-around border-t border-gray-200 bg-white py-2">
+    <nav className="fixed inset-x-0 bottom-0 mx-auto flex max-w-md justify-around border-t border-gray-200 bg-white py-2">
       {tabs.map((tab) => (
         <NavLink
           key={tab.to}
