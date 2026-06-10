@@ -11,13 +11,13 @@ export function EspacioConfidencialPage() {
           <button type="button" onClick={() => navigate(-1)} className="text-2xl text-primary">
             ←
           </button>
-          <h1 className="text-2xl font-semibold text-primary">🛡️🔒 Espacio Confidencial</h1>
+          <h1 className="text-2xl font-semibold text-primary">🔒 Tu espacio privado y seguro</h1>
         </div>
 
         <div className="rounded-card bg-white p-4 shadow-sm">
           <p className="text-gray-600">
-            Este es un espacio privado donde puedes hablar con un orientador sobre cómo te sientes. Nadie más en
-            la app puede ver esta conversación.
+            Aquí puedes hablar con un orientador sobre cómo te sientes, a tu ritmo y sin que nadie más en la app
+            vea esta conversación. No hay respuestas correctas o incorrectas, solo un espacio para ti.
           </p>
           <p className="mt-3 text-sm text-coral">
             Este espacio te acompaña, pero no reemplaza a un profesional de salud mental.
@@ -29,9 +29,9 @@ export function EspacioConfidencialPage() {
         <button
           type="button"
           onClick={() => navigate('/espacio-confidencial/chat')}
-          className="rounded-pill bg-primary px-6 py-3 font-semibold text-white shadow-sm"
+          className="rounded-pill bg-primary px-6 py-4 text-lg font-semibold text-white shadow-sm"
         >
-          Hablar con un orientador
+          💬 Hablar con un orientador
         </button>
       </main>
     </div>
