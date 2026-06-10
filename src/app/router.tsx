@@ -9,6 +9,8 @@ import { HerramientasPage } from '../features/herramientas/HerramientasPage'
 import { DiarioPage } from '../features/diario/DiarioPage'
 import { ComunidadPage } from '../features/comunidad/ComunidadPage'
 import { PerfilPage } from '../features/perfil/PerfilPage'
+import { EspacioConfidencialPage } from '../features/chat/EspacioConfidencialPage'
+import { ChatPage } from '../features/chat/ChatPage'
 
 export const router = createBrowserRouter([
   { path: '/bienvenida', element: <BienvenidaPage /> },
@@ -27,6 +29,8 @@ export const router = createBrowserRouter([
           { path: '/perfil', element: <PerfilPage /> },
         ],
       },
+      { path: '/espacio-confidencial', element: <EspacioConfidencialPage /> },
+      { path: '/espacio-confidencial/chat', element: <ChatPage /> },
     ],
   },
 ])

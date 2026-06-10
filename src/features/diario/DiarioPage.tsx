@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useAuthStore } from '../../stores/useAuthStore'
 import { useEmociones } from './hooks/useEmociones'
 import { useEntrada } from './hooks/useEntrada'
@@ -57,7 +58,16 @@ export function DiarioPage() {
 
   return (
     <main className="flex flex-col gap-5 p-6 pt-12 pb-24">
-      <h1 className="text-2xl font-semibold text-primary">Diario</h1>
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl font-semibold text-primary">Diario</h1>
+        <Link
+          to="/espacio-confidencial"
+          aria-label="Espacio Confidencial"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-xl shadow-sm"
+        >
+          🛡️🔒
+        </Link>
+      </div>
 
       <div className="flex justify-between">
         {dias.map((dia) => {
