@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #7b61ff;
+  --color-lavanda: #f7f5ff;
+  --color-menta: #7dd3c0;
+  --color-coral: #ff9b85;
+  --color-amarillo: #ffd166;
+  --color-celeste: #8ecae6;
+
+  --radius-card: 1.25rem;
+  --radius-pill: 9999px;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--color-lavanda);
+}
