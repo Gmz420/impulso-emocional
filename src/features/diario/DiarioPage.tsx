@@ -8,7 +8,7 @@ import { useGuardarEntrada } from './hooks/useGuardarEntrada'
 const NOMBRES_DIA = ['D', 'L', 'M', 'M', 'J', 'V', 'S']
 
 function fechaISO(fecha: Date): string {
-  return fecha.toISOString().slice(0, 10)
+  return fecha.toLocaleDateString('en-CA')
 }
 
 function ultimos7Dias(): Date[] {

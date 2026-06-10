@@ -3,7 +3,7 @@ import type { RegistroEmocional } from '../../../types/registroEmocional'
 import type { Frase } from '../../../types/frase'
 
 function hoy(): string {
-  return new Date().toISOString().slice(0, 10)
+  return new Date().toLocaleDateString('en-CA')
 }
 
 export async function getRegistroHoy(userId: string): Promise<RegistroEmocional | null> {
