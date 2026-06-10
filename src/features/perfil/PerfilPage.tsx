@@ -16,6 +16,12 @@ export function PerfilPage() {
 
       {isLoading && <p className="text-gray-400">Cargando perfil...</p>}
 
+      {perfil?.badge_motivacional && (
+        <div className="rounded-pill bg-lavanda px-4 py-2 text-sm font-medium text-primary">
+          {perfil.badge_motivacional}
+        </div>
+      )}
+
       <div className="flex gap-4">
         <div className="rounded-card bg-white px-6 py-4 shadow-sm">
           <p className="text-2xl font-bold text-primary">{perfil?.racha_actual ?? 0}</p>
