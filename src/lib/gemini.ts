@@ -13,6 +13,11 @@ const SYSTEM_PROMPT =
 export async function preguntarOrientador(historial: Mensaje[]): Promise<string> {
   const apiKey = import.meta.env.VITE_GEMINI_API_KEY
 
+  if (!apiKey) {
+    console.error('Gemini: falta VITE_GEMINI_API_KEY (no está configurada en este entorno).')
+    throw new Error('No se pudo contactar al orientador. Intenta de nuevo en un momento.')
+  }
+
   const contents = historial.map((mensaje) => ({
     role: mensaje.emisor === 'usuario' ? 'user' : 'model',
     parts: [{ text: mensaje.contenido }],
@@ -31,6 +36,8 @@ export async function preguntarOrientador(historial: Mensaje[]): Promise<string>
   )
 
   if (!respuesta.ok) {
+    const cuerpoError = await respuesta.json().catch(() => null)
+    console.error('Gemini respondió con error:', respuesta.status, cuerpoError ?? respuesta.statusText)
     throw new Error('No se pudo contactar al orientador. Intenta de nuevo en un momento.')
   }
 
